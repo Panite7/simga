@@ -1,0 +1,103 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-style: succulent;
+ font-family: 'Succulent', cursive;
+}
+
+@font-face {
+  font-family: 'Succulent';
+  src: url('fonts/Succulent.ttf') format('truetype');
+}
+
+body {
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: pink; 
+ font-family: sans-serif, Arial, Helvetica;
+ overflow: hidden;
+
+}   
+
+.letter-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.letter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: lightpink;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+.poofing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1f40d2;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #000000;
+  opacity: 0;
+  animation: sigmafade 4s ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .falling-message {
+  animation: fall linear forwards;
+  position: absolute;
+  z-index: -2;
+}
+
+.falling-message img
+{
+  width: 100px;
+  height: 100px;
+  object-fit:cover;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+ @keyframes sigmafade {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      25% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      70% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+    }
+
+
+   
