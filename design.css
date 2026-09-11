@@ -32,16 +32,16 @@ body {
 }
 .arrow {
 position: fixed;
-  left: 27%;
-  top: 9%;
+  left: 27px;
+  top: 9px;
   transform: translateY(-50%) rotate(-30deg);
   z-index: 2;
 
 }
 .image-container {
 position: fixed;
-  left: 27%;
-  top: 23%;
+  left: 27px;
+  top: 23px;
   transform: translateY(-50%) rotate(-30deg);
   z-index: 2;
 
